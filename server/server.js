@@ -25,9 +25,14 @@ const CLIENT_URL = process.env.CLIENT_URL || 'http://localhost:5173';
 // Connect to MongoDB Atlas
 connectDB();
 
-// CORS Configuration
+// CORS Configuration: support comma-separated domains and Vercel deployments
+const configuredClientUrls = (process.env.CLIENT_URL || 'http://localhost:5173')
+  .split(',')
+  .map((u) => u.trim().replace(/\/$/, ''))
+  .filter(Boolean);
+
 const allowedOrigins = [
-  CLIENT_URL,
+  ...configuredClientUrls,
   'http://localhost:5173',
   'http://localhost:5174',
   'http://localhost:8080'
@@ -37,7 +42,11 @@ app.use(
   cors({
     origin: (origin, callback) => {
       // Allow requests with no origin (like mobile apps, curl, or Postman)
-      if (!origin || allowedOrigins.includes(origin)) {
+      if (
+        !origin ||
+        allowedOrigins.includes(origin) ||
+        origin.endsWith('.vercel.app')
+      ) {
         callback(null, true);
       } else {
         callback(new Error(`CORS blocked for origin: ${origin}`));
