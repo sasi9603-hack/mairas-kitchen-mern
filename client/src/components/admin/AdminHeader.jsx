@@ -25,7 +25,12 @@ export default function AdminHeader({ onToggleSidebar }) {
       try {
         const res = await api.getHealth();
         if (isMounted) {
-          setDbStatus(res?.database === 'connected' ? 'connected' : 'disconnected');
+          const isConnected =
+            res?.database?.status === 'connected' ||
+            res?.data?.database?.status === 'connected' ||
+            res?.database?.connected === true ||
+            res?.data?.database?.connected === true;
+          setDbStatus(isConnected ? 'connected' : 'disconnected');
         }
       } catch {
         if (isMounted) setDbStatus('disconnected');

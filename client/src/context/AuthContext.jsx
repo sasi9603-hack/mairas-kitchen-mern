@@ -36,9 +36,15 @@ export function AuthProvider({ children }) {
           handleLogout();
         }
       } catch (err) {
-        // If token verification fails (401), clean up session
+        // If token verification fails (401 or invalid), clean up session
         if (err.status === 401) {
           handleLogout();
+        } else {
+          // If server is unreachable or timed out, check if we have a valid cached user
+          const savedUser = localStorage.getItem('mk_admin_user');
+          if (!savedUser) {
+            handleLogout();
+          }
         }
       } finally {
         if (isMounted) setLoading(false);

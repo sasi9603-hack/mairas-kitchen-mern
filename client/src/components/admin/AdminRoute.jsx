@@ -5,8 +5,19 @@ import { useAuth } from '../../context/AuthContext';
 export default function AdminRoute() {
   const { isAuthenticated, isAdmin, loading } = useAuth();
   const location = useLocation();
+  const [timedOut, setTimedOut] = React.useState(false);
 
-  if (loading) {
+  React.useEffect(() => {
+    let timer;
+    if (loading) {
+      timer = setTimeout(() => setTimedOut(true), 4500);
+    } else {
+      setTimedOut(false);
+    }
+    return () => clearTimeout(timer);
+  }, [loading]);
+
+  if (loading && !timedOut) {
     return (
       <div
         style={{
@@ -39,6 +50,48 @@ export default function AdminRoute() {
             to { transform: rotate(360deg); }
           }
         `}</style>
+      </div>
+    );
+  }
+
+  if (loading && timedOut) {
+    return (
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          minHeight: '100vh',
+          backgroundColor: '#0f271c',
+          color: '#f9f7f2',
+          fontFamily: "'Plus Jakarta Sans', sans-serif",
+          padding: '2rem',
+          textAlign: 'center'
+        }}
+      >
+        <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>⚠️</div>
+        <h3 style={{ margin: '0 0 0.5rem', color: '#c68a35' }}>Verification Timed Out</h3>
+        <p style={{ maxWidth: '420px', color: '#a3b8aa', fontSize: '0.9rem', marginBottom: '1.5rem' }}>
+          Backend server took longer than expected to respond. Please ensure the Express server is running on port 5000.
+        </p>
+        <div style={{ display: 'flex', gap: '0.75rem' }}>
+          <button
+            onClick={() => window.location.reload()}
+            style={{
+              padding: '0.6rem 1.25rem',
+              borderRadius: '6px',
+              border: '1px solid #c68a35',
+              background: '#c68a35',
+              color: '#0f271c',
+              fontWeight: 600,
+              cursor: 'pointer'
+            }}
+          >
+            Retry Verification
+          </button>
+          <Navigate to="/admin/login" state={{ from: location }} replace />
+        </div>
       </div>
     );
   }

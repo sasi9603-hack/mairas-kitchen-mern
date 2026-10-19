@@ -15,13 +15,19 @@ async function request(endpoint, options = {}) {
     ...options.headers
   };
 
+  const controller = new AbortController();
+  const timeoutMs = options.timeout || 5000;
+  const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+
   const config = {
     ...options,
-    headers
+    headers,
+    signal: options.signal || controller.signal
   };
 
   try {
     const response = await fetch(url, config);
+    clearTimeout(timeoutId);
     const data = await response.json().catch(() => ({}));
 
     if (!response.ok) {
@@ -34,6 +40,12 @@ async function request(endpoint, options = {}) {
 
     return data;
   } catch (error) {
+    clearTimeout(timeoutId);
+    if (error.name === 'AbortError') {
+      const timeoutError = new Error(`Request to ${endpoint} timed out. Ensure backend server is running.`);
+      timeoutError.status = 504;
+      throw timeoutError;
+    }
     console.warn(`API [${options.method || 'GET'} ${endpoint}] error:`, error.message);
     throw error;
   }
