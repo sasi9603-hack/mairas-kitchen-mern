@@ -16,7 +16,7 @@ async function request(endpoint, options = {}) {
   };
 
   const controller = new AbortController();
-  const timeoutMs = options.timeout || 5000;
+  const timeoutMs = options.timeout || 35000;
   const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
 
   const config = {
@@ -42,7 +42,7 @@ async function request(endpoint, options = {}) {
   } catch (error) {
     clearTimeout(timeoutId);
     if (error.name === 'AbortError') {
-      const timeoutError = new Error(`Request to ${endpoint} timed out. Ensure backend server is running.`);
+      const timeoutError = new Error(`Request to ${endpoint} timed out. If the backend is hosted on Render free tier, it may be waking up from sleep. Please wait a moment and retry.`);
       timeoutError.status = 504;
       throw timeoutError;
     }
