@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import api from '../../services/api';
+import { MENU_CATEGORIES } from '../../data/data';
 
 export default function AdminOverview() {
   const [data, setData] = useState(null);
@@ -282,6 +283,55 @@ export default function AdminOverview() {
           </div>
         </div>
 
+      </div>
+
+      {/* Live Menu Catalog Status */}
+      <div className="admin-card" style={{ marginTop: '1.5rem' }}>
+        <div className="admin-card-header">
+          <div>
+            <h3 className="admin-card-title">Live Menu Catalog (168 Dishes)</h3>
+            <p style={{ margin: '0.25rem 0 0', fontSize: '0.8rem', color: 'var(--adm-text-muted)' }}>
+              17 active categories seeded and synchronized with MongoDB Atlas
+            </p>
+          </div>
+          <Link to="/admin/menu" className="admin-btn admin-btn-sm admin-btn-gold">
+            Manage Menu Catalog →
+          </Link>
+        </div>
+        <div style={{ padding: '1.25rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '0.75rem' }}>
+          {MENU_CATEGORIES.map((cat) => (
+            <Link
+              key={cat.id}
+              to="/admin/menu"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.75rem',
+                padding: '0.85rem 1rem',
+                borderRadius: 'var(--adm-radius-md)',
+                backgroundColor: 'var(--adm-card-bg, #ffffff)',
+                border: '1px solid var(--adm-border, #e2e8f0)',
+                textDecoration: 'none',
+                color: 'inherit',
+                transition: 'transform 0.15s ease, box-shadow 0.15s ease'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.05)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'none';
+                e.currentTarget.style.boxShadow = 'none';
+              }}
+            >
+              <span style={{ fontSize: '1.75rem' }}>{cat.icon}</span>
+              <div>
+                <div style={{ fontWeight: 600, fontSize: '0.88rem', color: 'var(--adm-primary)' }}>{cat.name}</div>
+                <div style={{ fontSize: '0.78rem', color: 'var(--adm-text-muted)' }}>{cat.items?.length || 0} dishes available</div>
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
     </div>
   );

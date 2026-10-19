@@ -2,9 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import RotatingBadge from '../components/RotatingBadge';
 import QuickActionDock from '../components/QuickActionDock';
-import { RESTAURANT_INFO } from '../data/data';
+import { RESTAURANT_INFO, MENU_CATEGORIES } from '../data/data';
 
 export default function Home() {
+  const totalDishes = MENU_CATEGORIES.reduce((acc, cat) => acc + (cat.items?.length || 0), 0);
+
   return (
     <div className="home-page-body">
       {/* Background Atmosphere Glow */}
@@ -44,9 +46,48 @@ export default function Home() {
 
           {/* Primary CTA Linking to Dedicated /menu */}
           <Link to="/menu" className="btn-primary-cta" id="cta-explore-menu">
-            <span>Explore Menu</span>
+            <span>Explore Full Menu ({totalDishes} Dishes)</span>
             <span aria-hidden="true">→</span>
           </Link>
+
+          {/* Category Quick-Hop Chips */}
+          <div style={{ marginTop: '1.75rem', marginBottom: '1.5rem', width: '100%', maxWidth: '720px' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.45rem', justifyContent: 'center' }}>
+              {MENU_CATEGORIES.map((cat) => (
+                <Link
+                  key={cat.id}
+                  to={`/menu?cat=${cat.id}`}
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '0.35rem',
+                    padding: '0.35rem 0.75rem',
+                    borderRadius: '999px',
+                    backgroundColor: 'rgba(255, 255, 255, 0.07)',
+                    backdropFilter: 'blur(6px)',
+                    border: '1px solid rgba(255, 255, 255, 0.12)',
+                    color: 'var(--text-primary, #ffffff)',
+                    fontSize: '0.78rem',
+                    textDecoration: 'none',
+                    transition: 'all 0.2s ease'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = 'rgba(217, 119, 6, 0.25)';
+                    e.currentTarget.style.borderColor = 'rgba(217, 119, 6, 0.6)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.07)';
+                    e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.12)';
+                  }}
+                  title={`View ${cat.name} (${cat.items?.length || 0} items)`}
+                >
+                  <span>{cat.icon}</span>
+                  <span>{cat.shortName || cat.name}</span>
+                  <span style={{ opacity: 0.65, fontSize: '0.7rem' }}>({cat.items?.length || 0})</span>
+                </Link>
+              ))}
+            </div>
+          </div>
 
           {/* Quick Action Dock (Call, WhatsApp, Maps, Instagram) */}
           <QuickActionDock />

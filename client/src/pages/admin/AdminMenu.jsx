@@ -1,15 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import api from '../../services/api';
+import { MENU_CATEGORIES } from '../../data/data';
 
 const CATEGORIES = [
-  'all',
-  'biryani',
-  'starters',
-  'tandoor',
-  'curries',
-  'breads',
-  'beverages',
-  'desserts'
+  { id: 'all', label: 'All Categories' },
+  ...MENU_CATEGORIES.map((c) => ({ id: c.id, label: c.name, icon: c.icon }))
 ];
 
 export default function AdminMenu() {
@@ -35,7 +30,8 @@ export default function AdminMenu() {
     itemId: '',
     name: '',
     description: '',
-    category: 'biryani',
+    category: MENU_CATEGORIES[0]?.id || 'biryanis',
+    categoryName: MENU_CATEGORIES[0]?.name || 'Wood-Fire Biryanis',
     price: '',
     diet: 'non-veg',
     image: '',
@@ -100,14 +96,17 @@ export default function AdminMenu() {
   // Open Create Modal
   const openCreateModal = () => {
     setIsEditing(false);
+    const defaultCat = MENU_CATEGORIES[0]?.id || 'biryanis';
+    const defaultMeta = MENU_CATEGORIES.find((c) => c.id === defaultCat);
     setFormData({
       itemId: `mk-${Date.now()}`,
       name: '',
       description: '',
-      category: 'biryani',
+      category: defaultCat,
+      categoryName: defaultMeta?.name || 'Wood-Fire Biryanis',
       price: '',
       diet: 'non-veg',
-      image: '/assets/images/biryani-woodfire.png',
+      image: defaultMeta?.image || '/assets/images/woodfire_biryani.jpg',
       available: true,
       ingredients: '',
       isChefSpecial: false
@@ -119,16 +118,17 @@ export default function AdminMenu() {
   const openEditModal = (item) => {
     setIsEditing(true);
     setFormData({
-      itemId: item.itemId || '',
+      itemId: item.itemId || item.id || '',
       name: item.name || '',
       description: item.description || '',
-      category: item.category || 'biryani',
+      category: item.category || 'biryanis',
+      categoryName: item.categoryName || '',
       price: item.price || '',
       diet: item.diet || 'non-veg',
       image: item.image || '',
       available: item.available !== false,
       ingredients: Array.isArray(item.ingredients) ? item.ingredients.join(', ') : (item.ingredients || ''),
-      isChefSpecial: Boolean(item.isChefSpecial)
+      isChefSpecial: Boolean(item.isChefSpecial || (Array.isArray(item.tags) && item.tags.includes("chef's special")))
     });
     setEditModalItem(item);
   };
@@ -141,12 +141,14 @@ export default function AdminMenu() {
       return;
     }
 
+    const matchedCategory = MENU_CATEGORIES.find((c) => c.id === formData.category);
     const payload = {
       ...formData,
+      categoryName: matchedCategory?.name || formData.categoryName || formData.category,
       price: Number(formData.price),
-      ingredients: formData.ingredients
-        ? formData.ingredients.split(',').map((s) => s.trim()).filter(Boolean)
-        : []
+      image: formData.image || matchedCategory?.image || '/assets/images/woodfire_biryani.jpg',
+      ingredients: typeof formData.ingredients === 'string' ? formData.ingredients.trim() : formData.ingredients,
+      tags: formData.isChefSpecial ? ["chef's special", "bestseller"] : ["popular"]
     };
 
     try {
@@ -275,8 +277,8 @@ export default function AdminMenu() {
                 title="Filter by Category"
               >
                 {CATEGORIES.map((c) => (
-                  <option key={c} value={c}>
-                    {c === 'all' ? 'All Categories' : c.charAt(0).toUpperCase() + c.slice(1)}
+                  <option key={c.id} value={c.id}>
+                    {c.icon ? `${c.icon} ` : ''}{c.label}
                   </option>
                 ))}
               </select>
@@ -290,6 +292,7 @@ export default function AdminMenu() {
                 <option value="all">All Diets</option>
                 <option value="veg">Vegetarian</option>
                 <option value="non-veg">Non-Vegetarian</option>
+                <option value="egg">Egg</option>
               </select>
 
               <select
@@ -385,8 +388,8 @@ export default function AdminMenu() {
                         {item.description}
                       </div>
                     </td>
-                    <td style={{ textTransform: 'capitalize', fontSize: '0.85rem' }}>
-                      {item.category}
+                    <td style={{ fontSize: '0.85rem', fontWeight: 500 }}>
+                      {item.categoryName || MENU_CATEGORIES.find((c) => c.id === item.category)?.name || item.category}
                     </td>
                     <td>
                       <span
@@ -396,7 +399,7 @@ export default function AdminMenu() {
                           gap: '0.35rem',
                           fontSize: '0.75rem',
                           fontWeight: 600,
-                          color: item.diet === 'veg' ? '#15803d' : '#b91c1c'
+                          color: item.diet === 'veg' ? '#15803d' : item.diet === 'egg' ? '#b45309' : '#b91c1c'
                         }}
                       >
                         <span
@@ -404,10 +407,10 @@ export default function AdminMenu() {
                             width: '8px',
                             height: '8px',
                             borderRadius: '50%',
-                            backgroundColor: item.diet === 'veg' ? '#22c55e' : '#ef4444'
+                            backgroundColor: item.diet === 'veg' ? '#22c55e' : item.diet === 'egg' ? '#f59e0b' : '#ef4444'
                           }}
                         />
-                        {item.diet === 'veg' ? 'Veg' : 'Non-Veg'}
+                        {item.diet === 'veg' ? 'Veg' : item.diet === 'egg' ? 'Egg' : 'Non-Veg'}
                       </span>
                     </td>
                     <td style={{ fontWeight: 700, fontSize: '0.95rem' }}>
@@ -485,9 +488,9 @@ export default function AdminMenu() {
                       value={formData.category}
                       onChange={(e) => setFormData({ ...formData, category: e.target.value })}
                     >
-                      {CATEGORIES.filter(c => c !== 'all').map((c) => (
-                        <option key={c} value={c}>
-                          {c.charAt(0).toUpperCase() + c.slice(1)}
+                      {MENU_CATEGORIES.map((c) => (
+                        <option key={c.id} value={c.id}>
+                          {c.icon} {c.name}
                         </option>
                       ))}
                     </select>
@@ -519,6 +522,7 @@ export default function AdminMenu() {
                     >
                       <option value="non-veg">Non-Vegetarian</option>
                       <option value="veg">Vegetarian</option>
+                      <option value="egg">Egg</option>
                     </select>
                   </div>
 

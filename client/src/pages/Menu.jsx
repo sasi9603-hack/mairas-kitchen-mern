@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import Header from '../components/Header';
 import EventRail from '../components/EventRail';
 import CategoryNav from '../components/CategoryNav';
@@ -14,13 +15,22 @@ import { MENU_CATEGORIES } from '../data/data';
 import api from '../services/api';
 
 export default function Menu() {
+  const [searchParams] = useSearchParams();
   const [categoriesData, setCategoriesData] = useState(MENU_CATEGORIES);
   const [isLoading, setIsLoading] = useState(false);
-  const [activeCategory, setActiveCategory] = useState('all');
+  const [activeCategory, setActiveCategory] = useState(searchParams.get('cat') || 'all');
   const [activeSubcategory, setActiveSubcategory] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [dietFilter, setDietFilter] = useState('all');
   const [closedCategories, setClosedCategories] = useState({});
+
+  useEffect(() => {
+    const catFromUrl = searchParams.get('cat');
+    if (catFromUrl) {
+      setActiveCategory(catFromUrl);
+      setActiveSubcategory(null);
+    }
+  }, [searchParams]);
 
   // Fetch menu items from backend API on mount
   useEffect(() => {
