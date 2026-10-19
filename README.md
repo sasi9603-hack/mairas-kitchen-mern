@@ -120,7 +120,7 @@ Hotel_Anime_design/
    NODE_ENV=development
    ```
 
-4. Seed the database with the initial menu catalog (33 dishes across 7 categories):
+4. Seed the database with the complete menu catalog (168 dishes across 17 categories):
    ```bash
    npm run seed
    ```
