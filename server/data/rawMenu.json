@@ -1,0 +1,1178 @@
+[
+  {
+    "name": "Tomato Soup",
+    "category": "Soups",
+    "price": 70,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Veg Sweet Corn Soup",
+    "category": "Soups",
+    "price": 80,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Veg Hot & Sour Soup",
+    "category": "Soups",
+    "price": 80,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Veg Manchow Soup",
+    "category": "Soups",
+    "price": 90,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Lemon Coriander Soup",
+    "category": "Soups",
+    "price": 90,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Chicken Sweet Corn Soup",
+    "category": "Soups",
+    "price": 100,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Chicken Hot & Sour Soup",
+    "category": "Soups",
+    "price": 100,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Chicken Manchow Soup",
+    "category": "Soups",
+    "price": 110,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Cucumber Salad",
+    "category": "Salads",
+    "price": 50,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Green Salad",
+    "category": "Salads",
+    "price": 60,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Mixed Raita",
+    "category": "Salads",
+    "price": 30,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Veg Manchurian",
+    "category": "Veg Starters",
+    "price": 210,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Chilli Paneer",
+    "category": "Veg Starters",
+    "price": 220,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Paneer 65",
+    "category": "Veg Starters",
+    "price": 220,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Paneer Manchurian",
+    "category": "Veg Starters",
+    "price": 230,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Gobi Manchurian",
+    "category": "Veg Starters",
+    "price": 200,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Gobi 65",
+    "category": "Veg Starters",
+    "price": 200,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Chilli Mushroom",
+    "category": "Veg Starters",
+    "price": 210,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Mushroom Manchurian",
+    "category": "Veg Starters",
+    "price": 220,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Mushroom 65",
+    "category": "Veg Starters",
+    "price": 210,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Crispy Corn",
+    "category": "Veg Starters",
+    "price": 220,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Crispy Veg",
+    "category": "Veg Starters",
+    "price": 200,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Paneer Pepper Dry",
+    "category": "Veg Starters",
+    "price": 210,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Paneer Majestic",
+    "category": "Veg Starters",
+    "price": 220,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Honey Chilli Potato",
+    "category": "Veg Starters",
+    "price": 210,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Chilli Baby Corn",
+    "category": "Veg Starters",
+    "price": 220,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Baby Corn Manchurian",
+    "category": "Veg Starters",
+    "price": 220,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Chicken Majestic",
+    "category": "Non-Veg Starters",
+    "price": 250,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Chicken 555",
+    "category": "Non-Veg Starters",
+    "price": 240,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Chilli Chicken",
+    "category": "Non-Veg Starters",
+    "price": 220,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Chicken 65",
+    "category": "Non-Veg Starters",
+    "price": 220,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Chicken Lollipop",
+    "category": "Non-Veg Starters",
+    "price": 270,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Chicken Drumstick",
+    "category": "Non-Veg Starters",
+    "price": 320,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Chicken Crispy Wings",
+    "category": "Non-Veg Starters",
+    "price": 220,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Chicken Chilli Wings",
+    "category": "Non-Veg Starters",
+    "price": 230,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Lemon Chicken",
+    "category": "Non-Veg Starters",
+    "price": 240,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Pepper Chicken",
+    "category": "Non-Veg Starters",
+    "price": 240,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Hyderabadi Long Stick Chicken",
+    "category": "Non-Veg Starters",
+    "price": 250,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Kaju Nut Dry Chicken",
+    "category": "Non-Veg Starters",
+    "price": 260,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Chicken Schezwan Bone Dry",
+    "category": "Non-Veg Starters",
+    "price": 260,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Kaju Nut Chicken Kheema Balls",
+    "category": "Non-Veg Starters",
+    "price": 270,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Mutton Roast",
+    "category": "Non-Veg Starters",
+    "price": 330,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Mutton Fry",
+    "category": "Non-Veg Starters",
+    "price": 330,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Mutton Schezwan Kaju Dry",
+    "category": "Non-Veg Starters",
+    "price": 350,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Chilli Egg",
+    "category": "Non-Veg Starters",
+    "price": 160,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Schezwan Egg Dry",
+    "category": "Non-Veg Starters",
+    "price": 180,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Omelette",
+    "category": "Non-Veg Starters",
+    "price": 40,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Boiled Eggs (2)",
+    "category": "Non-Veg Starters",
+    "price": 30,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Apollo Fish",
+    "category": "Seafood Starters",
+    "price": 260,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Chilli Fish",
+    "category": "Seafood Starters",
+    "price": 250,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Fish Roast B/L",
+    "category": "Seafood Starters",
+    "price": 260,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Tawa Fish",
+    "category": "Seafood Starters",
+    "price": 270,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Garlic Prawns",
+    "category": "Seafood Starters",
+    "price": 270,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Prawns Fry",
+    "category": "Seafood Starters",
+    "price": 250,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Chilli Prawns",
+    "category": "Seafood Starters",
+    "price": 260,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Roti",
+    "category": "Breads",
+    "price": 25,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Butter Roti",
+    "category": "Breads",
+    "price": 35,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Plain Naan",
+    "category": "Breads",
+    "price": 30,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Butter Naan",
+    "category": "Breads",
+    "price": 40,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Garlic Naan",
+    "category": "Breads",
+    "price": 50,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Plain Kulcha",
+    "category": "Breads",
+    "price": 40,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Masala Kulcha",
+    "category": "Breads",
+    "price": 50,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Paneer Kulcha",
+    "category": "Breads",
+    "price": 60,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Veg Kabab",
+    "category": "Veg Kebabs",
+    "price": 220,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Paneer Tikka Kabab",
+    "category": "Veg Kebabs",
+    "price": 240,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Malai Paneer Smokey Kabab",
+    "category": "Veg Kebabs",
+    "price": 260,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Mushroom Tikka Kabab",
+    "category": "Veg Kebabs",
+    "price": 260,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Paneer Hariyali Tikka",
+    "category": "Veg Kebabs",
+    "price": 250,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Veg Seekh Kabab",
+    "category": "Veg Kebabs",
+    "price": 220,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Kalmi Kabab Full",
+    "category": "Non-Veg Kebabs",
+    "price": 450,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Kalmi Kabab Half",
+    "category": "Non-Veg Kebabs",
+    "price": 250,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Tandoori Chicken Full",
+    "category": "Non-Veg Kebabs",
+    "price": 450,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Tandoori Chicken Half",
+    "category": "Non-Veg Kebabs",
+    "price": 250,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Malai Kabab",
+    "category": "Non-Veg Kebabs",
+    "price": 250,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Haryali Kabab",
+    "category": "Non-Veg Kebabs",
+    "price": 250,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Reshmi Kabab",
+    "category": "Non-Veg Kebabs",
+    "price": 250,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Chicken Tikka",
+    "category": "Non-Veg Kebabs",
+    "price": 260,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Afghani Tandoori Kabab Half",
+    "category": "Non-Veg Kebabs",
+    "price": 260,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Afghani Tandoori Kabab Full",
+    "category": "Non-Veg Kebabs",
+    "price": 500,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Afghani Tikka Kabab Half",
+    "category": "Non-Veg Kebabs",
+    "price": 260,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Afghani Tikka Kabab Full",
+    "category": "Non-Veg Kebabs",
+    "price": 500,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Tandoori Fish Kabab",
+    "category": "Non-Veg Kebabs",
+    "price": 250,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Afghani Fish Kabab",
+    "category": "Non-Veg Kebabs",
+    "price": 260,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Prawns Tikka Kabab",
+    "category": "Non-Veg Kebabs",
+    "price": 280,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Malai Prawns Kabab",
+    "category": "Non-Veg Kebabs",
+    "price": 280,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Veg Kolhapuri",
+    "category": "Veg Curries",
+    "price": 210,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Aloo Matar",
+    "category": "Veg Curries",
+    "price": 180,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Green Peas Masala",
+    "category": "Veg Curries",
+    "price": 180,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Mixed Veg Curry",
+    "category": "Veg Curries",
+    "price": 200,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Palak Paneer",
+    "category": "Veg Curries",
+    "price": 230,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Paneer Butter Masala",
+    "category": "Veg Curries",
+    "price": 240,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Mutter Paneer",
+    "category": "Veg Curries",
+    "price": 240,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Kaju Paneer",
+    "category": "Veg Curries",
+    "price": 250,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Methi Chaman",
+    "category": "Veg Curries",
+    "price": 220,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Kadai Paneer",
+    "category": "Veg Curries",
+    "price": 230,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Mushroom Curry",
+    "category": "Veg Curries",
+    "price": 200,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Paneer Tikka Masala",
+    "category": "Veg Curries",
+    "price": 230,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Tawa Veg Curry",
+    "category": "Veg Curries",
+    "price": 180,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Kaju Tomato Curry",
+    "category": "Veg Curries",
+    "price": 180,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Baby Corn Curry",
+    "category": "Veg Curries",
+    "price": 240,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Kaju Baby Corn Curry",
+    "category": "Veg Curries",
+    "price": 250,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Kadai Mushroom",
+    "category": "Veg Curries",
+    "price": 220,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Paneer Curry",
+    "category": "Veg Curries",
+    "price": 220,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Mutton Rogan Josh",
+    "category": "Non-Veg Curries",
+    "price": 320,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Mutton Hyderabadi",
+    "category": "Non-Veg Curries",
+    "price": 320,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Mutton Curry",
+    "category": "Non-Veg Curries",
+    "price": 320,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Chicken Mohali",
+    "category": "Non-Veg Curries",
+    "price": 260,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Chicken Methi Chaman",
+    "category": "Non-Veg Curries",
+    "price": 270,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Chicken Tikka Masala",
+    "category": "Non-Veg Curries",
+    "price": 260,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Chicken Chettinadu",
+    "category": "Non-Veg Curries",
+    "price": 260,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Butter Chicken",
+    "category": "Non-Veg Curries",
+    "price": 260,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Kadai Chicken",
+    "category": "Non-Veg Curries",
+    "price": 260,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Chicken Curry",
+    "category": "Non-Veg Curries",
+    "price": 260,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Chicken Bone Curry",
+    "category": "Non-Veg Curries",
+    "price": 240,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Chicken Boneless Curry",
+    "category": "Non-Veg Curries",
+    "price": 260,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Kaju Nut Chilly",
+    "category": "Non-Veg Curries",
+    "price": 260,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Kalmili Masala Half",
+    "category": "Non-Veg Curries",
+    "price": 250,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Kalmili Masala Full",
+    "category": "Non-Veg Curries",
+    "price": 450,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Chicken Chatpata",
+    "category": "Non-Veg Curries",
+    "price": 260,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Veg Fried Rice",
+    "category": "Fried Rice",
+    "price": 150,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Mixed Veg Fried Rice",
+    "category": "Fried Rice",
+    "price": 230,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Jeera Rice",
+    "category": "Fried Rice",
+    "price": 130,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Schezwan Veg Fried Rice",
+    "category": "Fried Rice",
+    "price": 200,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Paneer Kaju Fried Rice",
+    "category": "Fried Rice",
+    "price": 220,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Egg Fried Rice",
+    "category": "Fried Rice",
+    "price": 160,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Chicken Fried Rice",
+    "category": "Fried Rice",
+    "price": 180,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Schezwan Chicken Fried Rice",
+    "category": "Fried Rice",
+    "price": 190,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Special Chicken Fried Rice",
+    "category": "Fried Rice",
+    "price": 210,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Curd Rice",
+    "category": "Fried Rice",
+    "price": 80,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Paneer Fried Rice",
+    "category": "Fried Rice",
+    "price": 200,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Gobi Fried Rice",
+    "category": "Fried Rice",
+    "price": 180,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Mushroom Fried Rice",
+    "category": "Fried Rice",
+    "price": 180,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Veg Noodles",
+    "category": "Noodles",
+    "price": 160,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Paneer Noodles",
+    "category": "Noodles",
+    "price": 180,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Egg Noodles",
+    "category": "Noodles",
+    "price": 180,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Chicken Noodles",
+    "category": "Noodles",
+    "price": 200,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Chicken Schezwan Noodles",
+    "category": "Noodles",
+    "price": 210,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Mixed Non-Veg Noodles",
+    "category": "Noodles",
+    "price": 230,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Plain Biryani Rice",
+    "category": "Biryanis",
+    "price": 110,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Veg Biryani Rice",
+    "category": "Biryanis",
+    "price": 140,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Egg Biryani",
+    "category": "Biryanis",
+    "price": 180,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Chicken Dum Biryani",
+    "category": "Biryanis",
+    "price": 250,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Chicken Fry Piece Biryani",
+    "category": "Biryanis",
+    "price": 270,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Special Chicken Biryani (Boneless)",
+    "category": "Biryanis",
+    "price": 280,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Mutton Dum Biryani",
+    "category": "Biryanis",
+    "price": 350,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Mutton Fry Piece Biryani",
+    "category": "Biryanis",
+    "price": 370,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Tandoori Biryani",
+    "category": "Biryanis",
+    "price": 280,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Kalmi Biryani",
+    "category": "Biryanis",
+    "price": 280,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Mughlai Biryani",
+    "category": "Biryanis",
+    "price": 280,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Prawns Biryani",
+    "category": "Biryanis",
+    "price": 320,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Paneer Biryani",
+    "category": "Biryanis",
+    "price": 240,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Mushroom Biryani",
+    "category": "Biryanis",
+    "price": 220,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Kaju Nut Pulao",
+    "category": "Pulao",
+    "price": 240,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Fry Piece Chicken Pulao",
+    "category": "Pulao",
+    "price": 250,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Authentic Andhra Veg Pulao",
+    "category": "Pulao",
+    "price": 280,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Kashmiri Pulao",
+    "category": "Pulao",
+    "price": 260,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Chicken Kaju Nut Pulao",
+    "category": "Pulao",
+    "price": 270,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Tandoori Pulao",
+    "category": "Pulao",
+    "price": 260,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Mutton Pulao",
+    "category": "Pulao",
+    "price": 320,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Chicken Platter",
+    "category": "Platters",
+    "price": 899,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Mutton Platter",
+    "category": "Platters",
+    "price": 1199,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Sea Food Platter",
+    "category": "Platters",
+    "price": 999,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Mixed Platter",
+    "category": "Platters",
+    "price": 999,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Chicken Pot Biryani",
+    "category": "Pot Biryani",
+    "price": 899,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Mutton Pot Biryani",
+    "category": "Pot Biryani",
+    "price": 1199,
+    "isVeg": false,
+    "isAvailable": true
+  },
+  {
+    "name": "Gulab Jamun",
+    "category": "Desserts",
+    "price": 80,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Double Ka Meeta",
+    "category": "Desserts",
+    "price": 100,
+    "isVeg": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Kadhu Ka Kheer",
+    "category": "Desserts",
+    "price": 120,
+    "isVeg": true,
+    "isAvailable": true
+  }
+]
